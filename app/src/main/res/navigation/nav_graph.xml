@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="uk.co.jatra.navigation.FirstFragment"
+        android:label="activity_main"
+        tools:layout="@layout/first_fragment">
+        <action
+            android:id="@+id/first_to_second"
+            app:destination="@id/secondLevelActivity" />
+    </fragment>
+
+    <activity
+        android:id="@+id/secondLevelActivity"
+        android:name="uk.co.jatra.navigation.SecondLevelActivity"
+        android:label="second"
+        tools:layout="@layout/second">
+    </activity>
+
+</navigation>
